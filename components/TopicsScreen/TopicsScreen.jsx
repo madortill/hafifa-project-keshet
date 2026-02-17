@@ -3,12 +3,13 @@ import "./TopicsScreen.css";
 import topics from "../../src/assets/media/topics.png";
 import clouds from "../../src/assets/media/clouds.png";
 import astro from "../../src/assets/media/astronautAndSpaceship2.svg";
+import bg from "../../src/assets/media/MainBackground.png";
 
 function TopicsScreen() {
   const navigate = useNavigate();
 
   return (
-    <div className="topics-container">
+    <div className="topics-container" style={{ backgroundImage: `url(${bg})` }}>
       <text className="TopicPageHeader">מוכנים לדעת איך להציל את כדור הארץ?</text>
       <text className="TopicPageText">אלה הם הנושאים שנלמד היום בדיוק בשביל זה! 
       </text>

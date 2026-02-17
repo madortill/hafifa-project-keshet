@@ -8,6 +8,7 @@ import explosion from "../../src/assets/media/explosion.gif";
 import Rocket from "../../src/assets/media/rocket-bomb-svgrepo-com.svg";
 import launcher from "../../src/assets/media/launcher.svg";
 import Btn from "../../src/assets/media/launch.svg";
+import bg from "../../src/assets/media/MainBackground.png";
 
 function AsteroidPractice() {
   const { questionId } = useParams();
@@ -78,7 +79,7 @@ function AsteroidPractice() {
   };
 
   return (
-    <div className="asteroid-wrapper">
+    <div className="asteroid-wrapper" style={{ backgroundImage: `url(${bg})` }} >
       {/* כותרת */}
       <div className="asteroid-header">
         <div className="asteroid-title">תרגול - פיצוץ אסטרואיד</div>

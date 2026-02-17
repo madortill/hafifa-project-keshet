@@ -1,7 +1,7 @@
 .asteroid-wrapper {
     padding: 4%;
     box-sizing: border-box;
-    background-image: url("src/assets/media/MainBackground.png");
+    /* background-image: url("src/assets/media/MainBackground.png"); */
     background-size: cover;
     width: 100%;
     height: 100%;

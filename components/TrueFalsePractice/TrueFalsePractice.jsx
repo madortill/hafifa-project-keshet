@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import data from "../../src/data/practice1.json";
 import "./TrueFalsePractice.css";
 import astroTil from "../../src/assets/media/astronautAndSpaceship.svg";
+import bg from "../../src/assets/media/MainBackground.png";
 
 function TrueFalsePractice() {
   const { questionId } = useParams();
@@ -48,7 +49,7 @@ function TrueFalsePractice() {
   }, [questionId]);
 
   return (
-    <div className="practice-container">
+    <div className="practice-container" style={{ backgroundImage: `url(${bg})` }} >
       <div className="practice1-info">
         <p className="practice1-title">תרגול נכון ולא נכון</p>
         <div className="practice1-div">

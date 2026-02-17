@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./LearningEndScreen.css";
 import imgBtn from "../../src/assets/media/nextBtn.png";
 import astroTil from "../../src/assets/media/astronautAndSpaceship.svg";
+import bg from "../../src/assets/media/MainBackground.png";
 
 function LearningEndScreen({
   title,
@@ -26,7 +27,7 @@ function LearningEndScreen({
   }, [resetCount]);
 
   return (
-    <div className="end-intro-container">
+    <div className="end-intro-container" style={{ backgroundImage: `url(${bg})` }} >
         <p className="end-intro-title">{title}</p>
 
         {quesCounter && (
