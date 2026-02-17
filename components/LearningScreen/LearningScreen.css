@@ -1,6 +1,6 @@
 .learning-container {
     min-height: 100vh;
-    background-image: url("../../src/assets/media/MainBackground.png");
+    /* background-image: url("../../src/assets/media/MainBackground.png"); */
     background-size: cover;
     width: 100%;
     height: 100%;

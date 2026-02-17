@@ -8,6 +8,7 @@ import whatIsAsteroid from "../../src/assets/media/whatIsAsteroid.png";
 import howToDestroy from "../../src/assets/media/howToDestroy.png";
 import asteroidImgLeft from "../../src/assets/media/AsteroidFireLeft.svg";
 import asteroidImgRight from "../../src/assets/media/AsteroidFireRight.svg";
+import mainBg from "../../src/assets/media/MainBackground.png";
 
 function LearningScreen() {
   const { pageId } = useParams();
@@ -23,7 +24,7 @@ function LearningScreen() {
   };
 
   return (
-    <div className="learning-container">
+    <div className="learning-container" style={{ backgroundImage: `url(${mainBg})` }}>
       <div className="learning-info">
         <h1 className="learning-title">{page.title}</h1>
 
