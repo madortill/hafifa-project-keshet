@@ -11,7 +11,7 @@ function LearningEndScreen({
   primaryButton,
   secondaryButton,
   quesCounter,
-  resetCount
+  resetCount,
 }) {
   const navigate = useNavigate();
 
@@ -27,11 +27,15 @@ function LearningEndScreen({
   }, [resetCount]);
 
   return (
-    <div className="end-intro-container" style={{ backgroundImage: `url(${bg})` }} >
+    <div
+      className="end-intro-container"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      <div className="content-wrapper">
         <p className="end-intro-title">{title}</p>
 
         {quesCounter && (
-            <p className="ques-counter">ענית נכון על {correctCount}/7 שאלות</p>
+          <p className="ques-counter">ענית נכון על {correctCount}/7 שאלות</p>
         )}
 
         <p className="end-intro-text">{description}</p>
@@ -54,9 +58,10 @@ function LearningEndScreen({
             </button>
           )}
         </div>
-
-        <img src={astroTil} alt="astro img" className="astroTil"></img>
       </div>
+
+      <img src={astroTil} alt="astro img" className="astroTilLearn" />
+    </div>
   );
 }
 
