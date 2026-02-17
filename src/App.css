@@ -3,37 +3,17 @@
     src: url("src/assets/fonts/Fredoka/Fredoka-VariableFont_wdth,wght.ttf");
 }
 
-* {
-    font-family: "Fredoka";
+html {
+    font-family: "Fredoka", sans-serif;
     direction: rtl;
 }
 
 .app-wrapper {
-    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #3B6771;
   }
-/*   
-  .mobile-frame {
-    width: 100%;
-    max-width: 430px;   /* רוחב של אייפון גדול */
-    /* min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background-color: #3B6771;
-  } */
-
-  /* .mobile-frame {
-    width: 100%;
-    max-width: 430px;
-    min-height: 100vh;
-    background-color: #3B6771;
-    box-shadow: 0 0 40px rgba(0,0,0,0.4);
-    border-radius: 25px;
-    overflow: hidden;
-  } */
 
   .mobile-frame {
     width: 100%;
