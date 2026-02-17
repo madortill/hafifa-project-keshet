@@ -10,7 +10,8 @@ function TopicsScreen() {
   return (
     <div className="topics-container">
       <text className="TopicPageHeader">מוכנים לדעת איך להציל את כדור הארץ?</text>
-      <text className="TopicPageText">אלה הם הנושאים שנלמד היום בדיוק בשביל זה!</text>
+      <text className="TopicPageText">אלה הם הנושאים שנלמד היום בדיוק בשביל זה! 
+      </text>
 
       <img src={topics} alt="topics" className="topics"></img>
 
