@@ -1,0 +1,156 @@
+.asteroid-wrapper {
+    padding: 4%;
+    box-sizing: border-box;
+    background-image: url("src/assets/media/MainBackground.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 480px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .asteroid-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 86%;
+    justify-content: space-between;
+    margin-bottom: 4%;
+  }
+  
+  .asteroid-title {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-top: 15%;
+  }
+
+  .asteroid-p {
+    font-size: 1rem;
+    margin-bottom: -1%;
+  }
+  
+  .asteroid-counter {
+    align-self: flex-start;
+    font-size: 1.5rem;
+  }
+
+  .game-astro-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+    height: 65vh;
+
+    background: rgba(23, 56, 99, 0.9);
+    border-radius: 10px;
+  }
+
+  .speach-div {
+    display: flex;
+    align-items: center;
+}
+
+.spaceLaunchStation {
+    width: 25%;
+}
+
+.speech-bubble {
+    background: #e6f0ff;
+    color: #001a33;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border-radius: 50px 50px 0 50px;
+    margin-bottom: 4%;
+    font-size: 1rem;
+    height: min-content;
+  }
+  
+  .space-area {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    max-height: 420px;
+    background: #0c1c3f;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5%;
+  }
+  
+  .asteroid,
+  .explosion,
+  .rocket {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  .asteroid {
+    width: 12%;
+    min-width: 40px;
+  }
+  
+  .explosion {
+    width: 18%;
+    min-width: 70px;
+  }
+  
+  .launcher {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 18%;
+    min-width: 60px;
+  }
+  
+  .rocket {
+    width: 8%;
+    min-width: 30px;
+    transition: all 1s ease-in-out;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .controls input {
+    width: 25%;
+    padding: 2%;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+  }
+  
+  .launch-btn {
+    cursor: pointer;
+    transition: 0.3s;
+    width: 25%;
+    height: 40%;
+  }
+  
+  .launch-btn.glow {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  
+  .feedback {
+    margin-top: 4%;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .feedback.success {
+    color: #5cff8d;
+  }
+  
+  .feedback.fail {
+    color: #ff6b6b;
+  }
+  

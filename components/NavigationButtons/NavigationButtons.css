@@ -1,0 +1,11 @@
+.learning-nav {
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16% 0;
+}
+
+.nav-btn {
+    width: 24%;
+}

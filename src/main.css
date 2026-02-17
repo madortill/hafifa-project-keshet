@@ -1,0 +1,23 @@
+body {
+    background-color: #3B6771;
+    margin: 0;
+        box-sizing: border-box;
+        background-size: 100vw 100vh;
+        min-height: 100vh;
+    max-width: 480px;
+
+}
+
+/* @media (max-width: 480px) {
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        background-size: 100vw 100vh;
+        min-height: 100vh;
+    }
+} */
+
+::selection {
+    background-color: #3B6771;
+    color: white;
+}

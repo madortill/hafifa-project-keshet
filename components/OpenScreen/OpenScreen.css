@@ -1,0 +1,17 @@
+.load-container {
+    background-color: black;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.load-gif {
+    width: 100vw;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+}

@@ -1,0 +1,99 @@
+.learning-container {
+    min-height: 100vh;
+    background-image: url("src/assets/media/MainBackground.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 480px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.learning-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.learning-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 5%;
+    text-align: center;
+    height: 65vh;
+
+    background: rgba(23, 56, 99, 0.9);
+    border-radius: 10px;
+}
+
+.learning-info-img {
+    width: 85%;
+    height: auto;
+    justify-self: center;
+    padding: 4% 0;
+}
+
+.learning-title {
+    padding: 15% 0 0 0;
+    width: 120%;
+    height: auto;
+    font-weight: 400;
+    font-size: 220%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.learning-p {
+    font-size: 115%;
+}
+
+.explosion-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.earth {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.asteroid-earth {
+    position: absolute;
+    top: 50%;
+    width: 25%;
+}
+
+.left-earth {
+    transform: rotate(200deg);
+    left: -100%;
+    animation: flyFromLeft 2s ease-out forwards;
+}
+
+.right-earth {
+    right: -100%;
+    top: 20%;
+    transform: rotate(-200deg);
+    animation: flyFromRight 2s ease-out forwards;
+}
+
+@keyframes flyFromLeft {
+    to {
+        transform: translateX(400%);
+    }
+}
+
+@keyframes flyFromRight {
+    to {
+        transform: translateX(-400%);
+    }
+}
