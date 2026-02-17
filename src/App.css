@@ -1,38 +1,45 @@
 @font-face {
-    font-family: "Fredoka";
-    src: url("/hafifa-project-keshet/Fredoka-VariableFont_wdth,wght.ttf");
+  font-family: "Fredoka";
+  src: url("/hafifa-project-keshet/Fredoka-VariableFont_wdth,wght.ttf");
+  src: url("/hafifa-project-keshet/Fredoka-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 html {
-    font-family: "Fredoka", sans-serif;
-    direction: rtl;
+  font-family: "Fredoka", sans-serif;
+  direction: rtl;
+}
+
+body, button, input, textarea, p, div {
+  font-family: "Fredoka", sans-serif;
 }
 
 .app-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3B6771;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3B6771;
+}
 
+.mobile-frame {
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 9 / 19.5;
+  /* יחס של טלפון */
+  background-color: #3B6771;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}
+
+@media (max-width: 480px) {
   .mobile-frame {
-    width: 100%;
-    max-width: 430px;
-    aspect-ratio: 9 / 19.5;   /* יחס של טלפון */
-    background-color: #3B6771;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 40px rgba(0,0,0,0.4);
-    border-radius: 25px;
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
   }
-  
-  @media (max-width: 480px) {
-    .mobile-frame {
-      max-width: 100%;
-      aspect-ratio: auto;
-      min-height: 100vh;
-      border-radius: 0;
-      box-shadow: none;
-    }
-  }
-  
+}
