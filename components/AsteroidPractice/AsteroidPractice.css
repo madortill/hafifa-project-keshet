@@ -13,6 +13,10 @@
   align-content: center;
 }
 
+.practice1-div {
+  position: relative;
+}
+
 .asteroid-header {
   display: flex;
   flex-direction: column;
@@ -144,7 +148,7 @@
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9));
 }
 
-.feedback {
+/* .feedback {
   position: absolute;
   top: 30%;
   margin-top: 4%;
@@ -158,6 +162,44 @@
 
 .feedback.fail {
   color: #ED5E5E;
+} */
+
+.feedback {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  font-size: clamp(16px, 4.5vw, 22px);
+  font-weight: 600;
+
+  padding: 6px 18px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 20;
+  animation: fadePop 0.4s ease;
+}
+
+.feedback.success {
+  color: #85BF8C;
+}
+
+.feedback.fail {
+  color: #ED5E5E;
+}
+
+@keyframes fadePop {
+  0% {
+    transform: translate(-50%, -10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
 }
 
 .explosion {
@@ -203,7 +245,7 @@
   pointer-events: none;
 }
 
-/* 🔥 הליבה */
+/* פיצוץ */
 .explosion-core {
   width: 60px;
   height: 60px;
@@ -228,7 +270,7 @@
   }
 }
 
-/* 🌊 גל הדף */
+/* גל הדף */
 .shockwave {
   position: absolute;
   top: 50%;
@@ -278,17 +320,13 @@
 }
 
 .space-area.hit {
-  animation: flash 0.3s ease;
+  animation: flash 0.3s ease, shake 0.3s ease;
 }
 
 @keyframes flash {
   0% { background: #0c1c3f; }
   50% { background: #132a66; }
   100% { background: #0c1c3f; }
-}
-
-.space-area.hit {
-  animation: shake 0.3s ease;
 }
 
 @keyframes shake {
@@ -299,7 +337,7 @@
   100% { transform: translateX(0); }
 }
 
-
+/* קונפטי */
 .confetti-container {
   position: absolute;
   top: 0;
@@ -317,7 +355,7 @@
   background: hsl(calc(360 * var(--i)), 80%, 60%);
   top: -10%;
   left: calc(100% * var(--i));
-  animation: fall 1.5s linear forwards;
+  animation: fall 1.8s linear forwards;
 }
 
 @keyframes fall {
@@ -330,4 +368,37 @@
     transform: translateY(120vh) rotate(720deg);
     opacity: 0;
   }
+}
+
+/* אנימצית כישלון */
+.asteroid.miss {
+  animation: asteroidShake 0.6s ease;
+}
+
+@keyframes asteroidShake {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(-8deg); }
+  50% { transform: translate(-50%, -50%) rotate(8deg); }
+  75% { transform: translate(-50%, -50%) rotate(-5deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* .rocket.miss {
+  animation: rocketFail 0.5s ease;
+}
+
+@keyframes rocketFail {
+  0% { transform: translate(-50%, -50%) rotate(-90deg); }
+  50% { transform: translate(-60%, -50%) rotate(-110deg); }
+  100% { transform: translate(-50%, -50%) rotate(-90deg); }
+} */
+
+.rocket.fail {
+  animation: rocketFade 0.6s ease forwards;
+}
+
+@keyframes rocketFade {
+  0% { opacity: 1; }
+  50% { transform: translate(-50%, -50%) rotate(-90deg) scale(0.8); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
 }

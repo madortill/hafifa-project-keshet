@@ -31,6 +31,23 @@ function LearningEndScreen({
       className="end-intro-container"
       style={{ backgroundImage: `url(${bg})` }}
     >
+      {correctCount > 5 && (
+            <>
+              <div className="confetti-container">
+                {Array.from({ length: 25 }).map((_, i) => (
+                  <span
+                    key={i}
+                    className="confetti-piece"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 0.5}s`,
+                      background: `hsl(${Math.random() * 360}, 80%, 60%)`,
+                    }}
+                  />
+                ))}
+              </div>
+            </>
+          )}
       <div className="content-wrapper">
         <p className="end-intro-title-header">{title}</p>
 
