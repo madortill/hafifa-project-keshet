@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./LearningEndScreen.css";
 import imgBtn from "../../src/assets/media/nextBtn.png";
 import astroTil from "../../src/assets/media/astronautAndSpaceship.svg";
@@ -17,6 +18,11 @@ function LearningEndScreen({
 
   const [correctCount, setCorrectCount] = useState(0);
 
+  const location = useLocation();
+
+  const shouldShowConfetti =
+  location.pathname === "/practice1/end" && correctCount > 4;
+
   useEffect(() => {
     const count = Number(localStorage.getItem("correctCount") || 0);
     setCorrectCount(count);
@@ -31,7 +37,7 @@ function LearningEndScreen({
       className="end-intro-container"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      {correctCount > 5 && (
+      {shouldShowConfetti && (
             <>
               <div className="confetti-container">
                 {Array.from({ length: 25 }).map((_, i) => (
