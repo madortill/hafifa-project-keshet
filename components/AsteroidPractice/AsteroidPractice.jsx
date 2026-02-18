@@ -105,7 +105,7 @@ function AsteroidPractice() {
         </div>
 
         {/* אזור משחק */}
-        <div className="space-area">
+        <div className={`space-area ${showExplosion ? "hit" : ""}`}>
           {/* אסטרואיד */}
           <img
             src={Asteroid}
@@ -123,11 +123,32 @@ function AsteroidPractice() {
               style={{ left: `${question.x}%`, top: `${question.y}%` }}
             />
           )} */}
-          {showExplosion && (
+          {/* {showExplosion && (
             <div
               className="explosion"
               style={{ left: `${question.x}%`, top: `${question.y}%` }}
             />
+          )} */}
+          {showExplosion && (
+            <div
+              className="explosion-wrapper"
+              style={{ left: `${question.x}%`, top: `${question.y}%` }}
+            >
+              <div className="explosion-core" />
+              <div className="shockwave" />
+              {Array.from({ length: 12 }).map((_, i) => (
+                <span
+                  key={i}
+                  className="particle"
+                  style={{
+                    transform: `translate(-50%, -50%)`,
+                    animationDelay: `${Math.random() * 0.2}s`,
+                    left: "50%",
+                    top: "50%",
+                  }}
+                />
+              ))}
+            </div>
           )}
 
           {/* טיל */}
