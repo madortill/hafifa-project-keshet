@@ -1,13 +1,11 @@
 .topics-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-image: url("src/assets/media/MainBackground.png"); */
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 80%;
   min-height: 100vh;
   max-width: 480px;
   color: white;
@@ -21,6 +19,7 @@
 
   background: #FFD096;
   animation: glowPulseBtn 2s ease-in-out infinite 2.5s;
+  color: black;
 
   position: relative;
   top: 8%;
@@ -62,7 +61,8 @@
   text-align: center;
   width: 80%;
   font-size: clamp(18px, 7vw, 28px);
-  padding: 5% 0 2% 0;
+  padding: 10% 0 2% 0;
+  font-weight: 450;
 }
 
 .TopicPageText {
@@ -84,7 +84,7 @@
   z-index: 5;
   width: 18%;
   height: auto;
-  top: 21%;
+  top: 22%;
   left: 10%;
 
   transform: translateY(120vh) rotate(0deg);

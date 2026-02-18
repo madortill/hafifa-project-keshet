@@ -79,7 +79,7 @@ function AsteroidPractice() {
   };
 
   return (
-    <div className="asteroid-wrapper" style={{ backgroundImage: `url(${bg})` }} >
+    <div className="asteroid-wrapper" style={{ backgroundImage: `url(${bg})` }}>
       {/* כותרת */}
       <div className="asteroid-header">
         <div className="asteroid-title">תרגול - פיצוץ אסטרואיד</div>
@@ -115,10 +115,16 @@ function AsteroidPractice() {
           />
 
           {/* פיצוץ */}
-          {showExplosion && (
+          {/* {showExplosion && (
             <img
               src={explosion}
               alt=""
+              className="explosion"
+              style={{ left: `${question.x}%`, top: `${question.y}%` }}
+            />
+          )} */}
+          {showExplosion && (
+            <div
               className="explosion"
               style={{ left: `${question.x}%`, top: `${question.y}%` }}
             />
@@ -167,8 +173,26 @@ function AsteroidPractice() {
       </div>
 
       {/* חיווי */}
-      {feedback === "success" && (
+      {/* {feedback === "success" && (
         <div className="feedback success">כל הכבוד!</div>
+      )} */}
+      {feedback === "success" && (
+        <>
+          <div className="confetti-container">
+            {Array.from({ length: 25 }).map((_, i) => (
+              <span
+                key={i}
+                className="confetti-piece"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 0.5}s`,
+                  background: `hsl(${Math.random() * 360}, 80%, 60%)`,
+                }}
+              />
+            ))}
+          </div>
+          <div className="feedback success">כל הכבוד!</div>
+        </>
       )}
 
       {feedback === "fail" && <div className="feedback fail">לא נורא :)</div>}

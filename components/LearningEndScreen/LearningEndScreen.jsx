@@ -32,18 +32,18 @@ function LearningEndScreen({
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="content-wrapper">
-        <p className="end-intro-title">{title}</p>
+        <p className="end-intro-title-header">{title}</p>
 
         {quesCounter && (
           <p className="ques-counter">ענית נכון על {correctCount}/7 שאלות</p>
         )}
 
-        <p className="end-intro-text">{description}</p>
+        <p className="end-intro-text-p">{description}</p>
 
         <div className="end-intro-buttons">
           <button
             onClick={() => navigate(primaryButton.path)}
-            className="primary-btn"
+            className="primary-btn-end-intro"
           >
             {primaryButton.label}
             <img src={imgBtn} alt="img btn" className="img-btn-end-intro"></img>
@@ -51,7 +51,7 @@ function LearningEndScreen({
 
           {secondaryButton && (
             <button
-              className="secondary-btn"
+              className="secondary-btn-end-intro"
               onClick={() => navigate(secondaryButton.path)}
             >
               {secondaryButton.label}

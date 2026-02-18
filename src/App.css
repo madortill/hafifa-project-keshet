@@ -24,7 +24,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3B6771;
+  /* background-color: #3B6771; */
 }
 
 .mobile-frame {
@@ -33,7 +33,7 @@ div {
   /* aspect-ratio: 9 / 19.5; */
   min-height: 100vh;
   aspect-ratio: auto;
-  background-color: #3B6771;
+  /* background-color: #3B6771; */
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);

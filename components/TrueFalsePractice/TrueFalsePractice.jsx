@@ -58,6 +58,13 @@ function TrueFalsePractice() {
             {questionIndex + 1}/{data.questions.length}
           </div>
 
+            {/* טקסט חיווי */}
+            {feedback && (
+              <div className={`feedback ${feedback}`}>
+                {feedback === "correct" ? "יפה מאוד!" : "לא נכון :("}
+              </div>
+            )}
+            
           {/* שאלה */}
           <div className="practice-question">{question.text}</div>
 
@@ -82,12 +89,6 @@ function TrueFalsePractice() {
             </button>
           </div>
 
-          {/* טקסט חיווי */}
-          {feedback && (
-            <div className={`feedback ${feedback}`}>
-              {feedback === "correct" ? "יפה מאוד!" : "לא נכון :("}
-            </div>
-          )}
         </div>
         <img src={astroTil} alt="astro img" className="astroTil-practice"></img>
       </div>

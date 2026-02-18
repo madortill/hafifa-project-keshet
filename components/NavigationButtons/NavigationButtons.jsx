@@ -29,19 +29,19 @@ function LearningNavigation({ currentPage, totalPages }) {
   return (
     <div className="learning-nav">
       <img
-        src={backBtn}
-        alt="back btn"
-        className="nav-btn"
-        onClick={goBack}
-        disabled={currentPage === 1}
-      ></img>
-
-      <img
         src={nextBtn}
         alt="next btn"
         className="nav-btn"
         onClick={handleClick} 
       ></img>
+
+      {currentPage>1 && <img
+        src={backBtn}
+        alt="back btn"
+        className="nav-btn"
+        onClick={goBack}
+        disabled={currentPage === 1}
+      ></img>}
     </div>
   );
 }
