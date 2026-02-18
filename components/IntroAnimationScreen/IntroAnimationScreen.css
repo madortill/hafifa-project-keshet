@@ -13,7 +13,8 @@
     max-width: 80px;
     height: auto;
     top: 1.5%;
-    right: 40%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header {
@@ -35,8 +36,9 @@
     
     position: absolute;
     top: 75%;
-    right: 40%;
-    
+    left: 50%;
+    transform: translateX(-50%);
+
     background: #FFD096;
     animation: glowPulse 2s ease-in-out infinite 2.5s;
     color: black;
@@ -45,16 +47,6 @@
     border-radius: 40px;
     padding: 9px 22px;
 }
-
-/* @keyframes flyUp {
-    from {
-        transform: translateY(100vh);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-} */
 
 @keyframes flyUp {
     from {

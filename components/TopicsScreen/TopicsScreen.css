@@ -22,19 +22,18 @@
   color: black;
 
   position: relative;
-  top: 8%;
+  top: 10%;
   margin: 10% 0;
   z-index: 4;
 
-  width: 40%;
+  width: 42%;
   max-width: 260px;
   min-width: 140px;
 
-  font-size: clamp(0.9rem, 4vw, 1.3rem);
+  font-size: clamp(0.9rem, 3.8vw, 1.2rem);
 
   padding: 0.6em 1.2em;
   border-radius: 2.5rem;
-
 }
 
 @keyframes glowPulseBtn {
@@ -53,7 +52,7 @@
 
 .topics {
   z-index: 1;
-  width: 60%;
+  width: 53%;
   height: auto;
 }
 
@@ -82,9 +81,9 @@
 .astro {
   position: absolute;
   z-index: 5;
-  width: 18%;
+  width: 17%;
   height: auto;
-  top: 22%;
+  top: 24%;
   left: 10%;
 
   transform: translateY(120vh) rotate(0deg);

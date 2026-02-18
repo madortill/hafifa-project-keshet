@@ -131,7 +131,7 @@ function AsteroidPractice() {
           )}
 
           {/* טיל */}
-          {rocketPosition && (
+          {rocketPosition && feedback !== "success" && (
             <img
               src={Rocket}
               alt=""
